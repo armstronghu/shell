@@ -8,5 +8,6 @@ send "MoreTV!@#_666\r"
 #expect "*]*"
 #send "su - moretv\r"
 #send "cd /data/www\r"
-
+#
 interact
+
