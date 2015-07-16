@@ -1,0 +1,14 @@
+#!/usr/bin/expect
+spawn ssh readonly@42.62.104.193
+expect "*password:*"
+send "MoreTV!@#_666\r"
+expect eof
+expect "*]*"
+
+send "ssh moretv@10.10.72.124\r"
+expect "*password:*"
+send "MoreTV_!@#&666&!\r"
+expect eof
+expect "*]*"
+send "cd /data/tools/apache-tomcat-7.0.59_appstores/webapps\r"
+interact

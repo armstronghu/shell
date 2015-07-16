@@ -1,0 +1,15 @@
+#!/usr/bin/expect
+spawn ssh readonly@42.62.104.193
+expect "*password:*"
+send "MoreTV!@#_666\r"
+expect eof
+expect "*]*"
+
+send "ssh root@10.10.90.59\r"
+expect eof
+expect "*]*"
+send "su - moretv\r"
+expect eof
+expect "*]*"
+send "cd /data/webapps/message_bus\r"
+interact
